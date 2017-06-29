@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|x64">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|x64">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLTO|Win32">
+      <Configuration>ReleaseLTO</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLTO|x64">
+      <Configuration>ReleaseLTO</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libgmpxx.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\gmp-impl.h" />
+    <ClInclude Include="..\gmpxx.h" />
+    <ClInclude Include="..\longlong.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\assert.c" />
+    <ClCompile Include="..\compat.c" />
+    <ClCompile Include="..\cxx\dummy.cc" />
+    <ClCompile Include="..\errno.c" />
+    <ClCompile Include="..\extract-dbl.c" />
+    <ClCompile Include="..\invalid.c" />
+    <ClCompile Include="..\memory.c" />
+    <ClCompile Include="..\mp_bpl.c" />
+    <ClCompile Include="..\mp_clz_tab.c" />
+    <ClCompile Include="..\mp_dv_tab.c" />
+    <ClCompile Include="..\mp_get_fns.c" />
+    <ClCompile Include="..\mp_minv_tab.c" />
+    <ClCompile Include="..\mp_set_fns.c" />
+    <ClCompile Include="..\nextprime.c" />
+    <ClCompile Include="..\primesieve.c" />
+    <ClCompile Include="..\version.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00D85F2A-F29E-4B45-B704-0EAD589FA606}</ProjectGuid>
+    <RootNamespace>libgmpxx</RootNamespace>
+    <ProjectName>libgmpxx</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <!--  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\yasm.props" />
+  </ImportGroup>
+-->
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libgmpxxd</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libgmpxxd</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>gmpd</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>gmpd</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libgmpxx</TargetName>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libgmpxx</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libgmpxx</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libgmpxx</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>gmp</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>gmp</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0502;_DEBUG;DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86;.\x86\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\x86\gmpxx$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/IGNORE:4042 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0600;_DEBUG;DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86_64;.\x86_64\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0502;DLL_EXPORT;_DEBUG;DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86;.\x86\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)\bin\x86\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)\lib\x86\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ModuleDefinitionFile>libgmpxx.def</ModuleDefinitionFile>
+      <LargeAddressAware>true</LargeAddressAware>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/IGNORE:4042 %(AdditionalOptions)</AdditionalOptions>
+      <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0600;DLL_EXPORT;_DEBUG;DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86_64;.\x86_64\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ModuleDefinitionFile>libgmpxx.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86;.\x86\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\x86\gmpxx$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/IGNORE:4042 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86;.\x86\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\x86\gmpxx$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/IGNORE:4042 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86_64;.\x86_64\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86_64;.\x86_64\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0502;DLL_EXPORT;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86;.\x86\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\bin\x86\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)\lib\x86\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ModuleDefinitionFile>libgmpxx.def</ModuleDefinitionFile>
+      <LargeAddressAware>true</LargeAddressAware>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/IGNORE:4042 %(AdditionalOptions)</AdditionalOptions>
+      <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+    </YASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <PreprocessorDefinitions>inline=__inline;__GMP_WITHIN_GMP;HAVE_CONFIG_H;_WIN32_WINNT=0x0600;DLL_EXPORT;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;.\mpn;.\x86_64;.\x86_64\mpn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4244;4146;4018;4554;4090;4267;4101;4334;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ModuleDefinitionFile>libgmpxx.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+copy .\gmp.h $(OutDir)\include\
+mkdir $(OutDir)\licenses
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist $(OutDir)\include\gmp.h (
+del $(OutDir)\include\gmp.h
+)
+if exist ..\fac_table.h (
+del ..\fac_table.h
+)
+if exist ..\fib_table.h (
+del ..\fib_table.h
+)
+if exist ..\gmp.h (
+del ..\gmp.h
+)
+if exist ..\mp_bases.h (
+del ..\mp_bases.h
+)
+if exist ..\trialdivtab.h (
+del ..\trialdivtab.h
+)
+if exist ..\mpn\perfsqr.h (
+del ..\mpn\perfsqr.h
+)
+if exist ..\mpn\jacobitab.h (
+del ..\mpn\jacobitab.h
+)
+if exist ..\mpn\mp_bases.c (
+del ..\mpn\mp_bases.c
+)
+if exist ..\mpn\fib_table.c (
+del ..\mpn\fib_table.c
+)
+if exist ..\gmp-mparam.h (
+del ..\gmp-mparam.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\gmp.h (
+del /f /q $(OutDir)\include\gmp.h
+)
+if exist $(OutDir)\licenses\gmp.txt (
+del /f /q $(OutDir)\licenses\gmp.txt
+)</Command>
+    </CustomBuildStep>
+    <YASM>
+      <Parser>1</Parser>
+      <Preprocessor>1</Preprocessor>
+    </YASM>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <!--  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\yasm.targets" />
+  </ImportGroup>
+-->
+</Project>

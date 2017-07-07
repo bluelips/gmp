@@ -277,58 +277,24 @@
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-copy .\gmp.h $(OutDir)\include\
+copy .\..\gmpxx.h $(OutDir)\include\
 mkdir $(OutDir)\licenses
-copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmpxx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist $(OutDir)\include\gmp.h (
-del $(OutDir)\include\gmp.h
-)
-if exist ..\fac_table.h (
-del ..\fac_table.h
-)
-if exist ..\fib_table.h (
-del ..\fib_table.h
-)
-if exist ..\gmp.h (
-del ..\gmp.h
-)
-if exist ..\mp_bases.h (
-del ..\mp_bases.h
-)
-if exist ..\trialdivtab.h (
-del ..\trialdivtab.h
-)
-if exist ..\mpn\perfsqr.h (
-del ..\mpn\perfsqr.h
-)
-if exist ..\mpn\jacobitab.h (
-del ..\mpn\jacobitab.h
-)
-if exist ..\mpn\mp_bases.c (
-del ..\mpn\mp_bases.c
-)
-if exist ..\mpn\fib_table.c (
-del ..\mpn\fib_table.c
-)
-if exist ..\gmp-mparam.h (
-del ..\gmp-mparam.h
-)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <Message>Custom Clean Step</Message>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\gmp.h (
-del /f /q $(OutDir)\include\gmp.h
+      <Command>if exist $(OutDir)\include\gmpxx.h (
+del /f /q $(OutDir)\include\gmpxx.h
 )
-if exist $(OutDir)\licenses\gmp.txt (
-del /f /q $(OutDir)\licenses\gmp.txt
+if exist $(OutDir)\licenses\gmpxx.txt (
+del /f /q $(OutDir)\licenses\gmpxx.txt
 )</Command>
     </CustomBuildStep>
     <YASM>
@@ -444,58 +410,24 @@ del /f /q $(OutDir)\licenses\gmp.txt
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-copy .\gmp.h $(OutDir)\include\
+copy .\..\gmpxx.h $(OutDir)\include\
 mkdir $(OutDir)\licenses
-copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmpxx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist $(OutDir)\include\gmp.h (
-del $(OutDir)\include\gmp.h
-)
-if exist ..\fac_table.h (
-del ..\fac_table.h
-)
-if exist ..\fib_table.h (
-del ..\fib_table.h
-)
-if exist ..\gmp.h (
-del ..\gmp.h
-)
-if exist ..\mp_bases.h (
-del ..\mp_bases.h
-)
-if exist ..\trialdivtab.h (
-del ..\trialdivtab.h
-)
-if exist ..\mpn\perfsqr.h (
-del ..\mpn\perfsqr.h
-)
-if exist ..\mpn\jacobitab.h (
-del ..\mpn\jacobitab.h
-)
-if exist ..\mpn\mp_bases.c (
-del ..\mpn\mp_bases.c
-)
-if exist ..\mpn\fib_table.c (
-del ..\mpn\fib_table.c
-)
-if exist ..\gmp-mparam.h (
-del ..\gmp-mparam.h
-)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <Message>Custom Clean Step</Message>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\gmp.h (
-del /f /q $(OutDir)\include\gmp.h
+      <Command>if exist $(OutDir)\include\gmpxx.h (
+del /f /q $(OutDir)\include\gmpxx.h
 )
-if exist $(OutDir)\licenses\gmp.txt (
-del /f /q $(OutDir)\licenses\gmp.txt
+if exist $(OutDir)\licenses\gmpxx.txt (
+del /f /q $(OutDir)\licenses\gmpxx.txt
 )</Command>
     </CustomBuildStep>
     <YASM>
@@ -622,58 +554,24 @@ del /f /q $(OutDir)\licenses\gmp.txt
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-copy .\gmp.h $(OutDir)\include\
+copy .\..\gmpxx.h $(OutDir)\include\
 mkdir $(OutDir)\licenses
-copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmpxx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist $(OutDir)\include\gmp.h (
-del $(OutDir)\include\gmp.h
-)
-if exist ..\fac_table.h (
-del ..\fac_table.h
-)
-if exist ..\fib_table.h (
-del ..\fib_table.h
-)
-if exist ..\gmp.h (
-del ..\gmp.h
-)
-if exist ..\mp_bases.h (
-del ..\mp_bases.h
-)
-if exist ..\trialdivtab.h (
-del ..\trialdivtab.h
-)
-if exist ..\mpn\perfsqr.h (
-del ..\mpn\perfsqr.h
-)
-if exist ..\mpn\jacobitab.h (
-del ..\mpn\jacobitab.h
-)
-if exist ..\mpn\mp_bases.c (
-del ..\mpn\mp_bases.c
-)
-if exist ..\mpn\fib_table.c (
-del ..\mpn\fib_table.c
-)
-if exist ..\gmp-mparam.h (
-del ..\gmp-mparam.h
-)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <Message>Custom Clean Step</Message>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\gmp.h (
-del /f /q $(OutDir)\include\gmp.h
+      <Command>if exist $(OutDir)\include\gmpxx.h (
+del /f /q $(OutDir)\include\gmpxx.h
 )
-if exist $(OutDir)\licenses\gmp.txt (
-del /f /q $(OutDir)\licenses\gmp.txt
+if exist $(OutDir)\licenses\gmpxx.txt (
+del /f /q $(OutDir)\licenses\gmpxx.txt
 )</Command>
     </CustomBuildStep>
     <YASM>
@@ -716,58 +614,24 @@ del /f /q $(OutDir)\licenses\gmp.txt
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-copy .\gmp.h $(OutDir)\include\
+copy .\..\gmpxx.h $(OutDir)\include\
 mkdir $(OutDir)\licenses
-copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmpxx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist $(OutDir)\include\gmp.h (
-del $(OutDir)\include\gmp.h
-)
-if exist ..\fac_table.h (
-del ..\fac_table.h
-)
-if exist ..\fib_table.h (
-del ..\fib_table.h
-)
-if exist ..\gmp.h (
-del ..\gmp.h
-)
-if exist ..\mp_bases.h (
-del ..\mp_bases.h
-)
-if exist ..\trialdivtab.h (
-del ..\trialdivtab.h
-)
-if exist ..\mpn\perfsqr.h (
-del ..\mpn\perfsqr.h
-)
-if exist ..\mpn\jacobitab.h (
-del ..\mpn\jacobitab.h
-)
-if exist ..\mpn\mp_bases.c (
-del ..\mpn\mp_bases.c
-)
-if exist ..\mpn\fib_table.c (
-del ..\mpn\fib_table.c
-)
-if exist ..\gmp-mparam.h (
-del ..\gmp-mparam.h
-)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <Message>Custom Clean Step</Message>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\gmp.h (
-del /f /q $(OutDir)\include\gmp.h
+      <Command>if exist $(OutDir)\include\gmpxx.h (
+del /f /q $(OutDir)\include\gmpxx.h
 )
-if exist $(OutDir)\licenses\gmp.txt (
-del /f /q $(OutDir)\licenses\gmp.txt
+if exist $(OutDir)\licenses\gmpxx.txt (
+del /f /q $(OutDir)\licenses\gmpxx.txt
 )</Command>
     </CustomBuildStep>
     <YASM>
@@ -998,58 +862,24 @@ del /f /q $(OutDir)\licenses\gmp.txt
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-copy .\gmp.h $(OutDir)\include\
+copy .\..\gmpxx.h $(OutDir)\include\
 mkdir $(OutDir)\licenses
-copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmp.txt</Command>
+copy ..\COPYING.LESSERv3 $(OutDir)\licenses\gmpxx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist $(OutDir)\include\gmp.h (
-del $(OutDir)\include\gmp.h
-)
-if exist ..\fac_table.h (
-del ..\fac_table.h
-)
-if exist ..\fib_table.h (
-del ..\fib_table.h
-)
-if exist ..\gmp.h (
-del ..\gmp.h
-)
-if exist ..\mp_bases.h (
-del ..\mp_bases.h
-)
-if exist ..\trialdivtab.h (
-del ..\trialdivtab.h
-)
-if exist ..\mpn\perfsqr.h (
-del ..\mpn\perfsqr.h
-)
-if exist ..\mpn\jacobitab.h (
-del ..\mpn\jacobitab.h
-)
-if exist ..\mpn\mp_bases.c (
-del ..\mpn\mp_bases.c
-)
-if exist ..\mpn\fib_table.c (
-del ..\mpn\fib_table.c
-)
-if exist ..\gmp-mparam.h (
-del ..\gmp-mparam.h
-)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <CustomBuildStep>
       <Message>Custom Clean Step</Message>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\gmp.h (
-del /f /q $(OutDir)\include\gmp.h
+      <Command>if exist $(OutDir)\include\gmpxx.h (
+del /f /q $(OutDir)\include\gmpxx.h
 )
-if exist $(OutDir)\licenses\gmp.txt (
-del /f /q $(OutDir)\licenses\gmp.txt
+if exist $(OutDir)\licenses\gmpxx.txt (
+del /f /q $(OutDir)\licenses\gmpxx.txt
 )</Command>
     </CustomBuildStep>
     <YASM>

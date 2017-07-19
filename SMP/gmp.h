@@ -64,7 +64,7 @@ see https://www.gnu.org/licenses/.  */
 #if defined(__x86_64) || defined(_M_X64)
 #define _LONG_LONG_LIMB 1
 #endif
-#if defined(DLL_EXPORT) && defined(NO_ASM)
+#if defined(DLL_EXPORT) // && defined(NO_ASM) // Note: the no_asm was fouling the dll export and should be orthogonal anyway?
 #define __GMP_LIBGMP_DLL 1
 #else
 #define __GMP_LIBGMP_DLL 0
@@ -403,9 +403,12 @@ typedef __mpq_struct *mpq_ptr;
 #endif
 
 /* Microsoft's C compiler accepts __inline */
-#ifdef _MSC_VER
-#define __GMP_EXTERN_INLINE  static __inline
-#endif
+#if defined(_MSC_VER)
+	#if !defined(inline)
+		#define inline __inline // msvc, when compiling C, needs this?
+	#endif // !defined(inline)
+	#define __GMP_EXTERN_INLINE  static __inline
+#endif // defined(_MSC_VER)
 
 /* Recent enough Sun C compilers want "inline" */
 #if defined (__SUNPRO_C) && __SUNPRO_C >= 0x560 \
